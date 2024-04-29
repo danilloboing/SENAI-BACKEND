@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/* CABEÇALHO */
+body {
+  font-family: "Century-Gothic", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #008eb6;
+  height: 170px;
+}
+
+header img {
+  float: right;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+
+header h1 {
+  float: left;
+  margin: 50px 0 0 30px;
+  font-size: 60px;
+  color: #fff;
+}
+
+/* MENU */
+
+nav {
+  clear: both;
+  width: 80%;
+  margin: 0px auto;
+  height: 55px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+nav .opcao {
+  float: left;
+  width: 31.3%;
+  background-color: #b1ccf5;
+  margin: 0 1%;
+  padding: 10px 0;
+  font-size: 26px;
+}
+
+nav .opcao:hover {
+  background-color: #83afd3;
+}
+
+section {
+  margin: 15px auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 50px;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+/* ESTILIZAÇAO PAGINA INICIAL */
+
+section #topo {
+  clear: both;
+  width: 900px;
+  margin: 0px auto;
+}
+
+section #titulos {
+  float: left;
+  height: 250px;
+  width: 650px;
+  margin: 0px auto;
+}
+
+section p {
+  clear: both;
+  text-align: center;
+  margin: 20px 80px;
+}
+.geladeira {
+  height: 250px;
+  width: 125px;
+}
+
+.direita {
+  float: right;
+}
+
+.esquerda {
+  float: left;
+}
+/*  */
+
+/* ESTILIZAÇAO PAGINA PRODUTOS */
+
+.tabela {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.tituloTabela {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px;
+  border: transparent;
+}
+
+tr,td,th {
+  border: 1px solid #b0c4de;
+  padding: 5px;
+}
+
+tr,td {
+  font-size: 14px;
+}
+
+/* Seleciona todos os elementos pares dentro do pai */
+tr:nth-child(even) {
+  background-color: #d800a9;
+}
+
+/* Seleciona todos os elementos ímpares dentro do pai */
+tr:nth-child(odd) {
+  background-color: hsl(131, 100%, 39%);
+}
+
+/*  */
+
+/* ESTILIZAÇAO PAGINA CONTATO */
+
+.faleConosco {
+  width: 300px;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faleConosco input, .faleConosco textarea, .faleConosco select {
+  margin: 5px auto;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.faleConosco textarea {
+  height: 100px;
+  resize: none;
+}
+
+.faleConosco button {
+  width: 30%;
+  margin: 0 10%;
+  background-color: #b1ccf5;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/*  */
+
+
+
+
+footer {
+  background-color: #005f89;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
