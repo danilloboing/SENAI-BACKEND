@@ -1,8 +1,8 @@
 package br.com.coldigogeladeiras.jdbcinterface;
 
-import java.sql.Connection;
+import java.util.List;
 import br.com.coldigogeladeiras.modelo.Marca;
 
-public class MarcaDAO {
-
+public interface MarcaDAO {
+	public List<Marca> buscar();
 }

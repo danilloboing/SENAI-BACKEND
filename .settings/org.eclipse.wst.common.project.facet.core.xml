@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
+  <runtime name="Apache Tomcat v9.0"/>
+  <secondary-runtime name="apache-tomcat-7.0.109"/>
+  <secondary-runtime name="apache-tomcat-9.0.65-2"/>
   <fixed facet="java"/>
   <fixed facet="jst.web"/>
   <fixed facet="wst.jsdt.web"/>
