@@ -1,13 +1,12 @@
-
 COLDIGO = new Object(); // Cria um objeto COLDIGO, que será usado como identificador do projeto
 
 $(document).ready(function() {
 	
 	//Cria uma constante com o valor da URL RAIZ do resto
-	COLDIGO.PATH = "/ColdigoGeladeira/rest/";
+	COLDIGO.PATH = "/ColdigoGeladeiras/rest/";
 	
-    $("header").load("/projeto-trilha-web/pages/admin/components/header.html")
-	$("footer").load("/projeto-trilha-web/pages/admin/components/footer.html")
+    $("header").load("/projeto-trilha-web/pages/admin/components/header.html");
+    $("footer").load("/projeto-trilha-web/pages/admin/components/footer.html");
     
     //função paara carregamento de páginas de contéudo, que
     //recebe como parâmetro o nome da pasta com a página a ser carregada

@@ -34,6 +34,6 @@ public class MarcaRest extends UtilRest {
 		} catch (Exception error) {
 			error.printStackTrace();
 			return this.buildErrorResponse(error.getMessage());
-			}
+		}
 	}
 }

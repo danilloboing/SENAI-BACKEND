@@ -1,7 +1,6 @@
 /**
  * 
  */
-alert("achou");
 
  function validaFaleConosco() {
   var nome = document.frmfaleconosco.txtnome.value;
