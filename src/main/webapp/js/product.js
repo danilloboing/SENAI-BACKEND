@@ -11,8 +11,9 @@ $(document).ready(function() {
 		
 		$.ajax({
 			type: "GET",
-			url: COLDIGO.PATH + "marca/buscar",
+			url: COLDIGO.PATH + "marca/buscar",			
 			success: function (marcas) {
+				alert(JSON.stringify(marcas));
 				
 				if(marcas!="") {
 					$(select).html("");
@@ -51,7 +52,7 @@ $(document).ready(function() {
 				
 			},
 			error: function (info) {
-				COLDIGO.exibirAviso("Error ao buscar as marcas: "+ error.status + " - "+ error.statusText);
+				COLDIGO.exibirAviso("Error ao buscar as marcas: "+ info.status + " - "+ info.statusText);
 				
 				$("#selMarca").html("");
 				var option = document.createElement("option");
