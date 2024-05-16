@@ -2,7 +2,6 @@ COLDIGO.produto = new Object();
 
 $(document).ready(function() {
 	COLDIGO.produto.carregarMarcas = function(id) {
-		
 		if(id!=undefined) {
 			select = "#selMarcaEdicao";
 		} else {
@@ -110,6 +109,7 @@ $(document).ready(function() {
 			success: function (dados) {
 				
 				dados = JSON.parse(dados);
+				console.log(dados);
 				
 				$("#listaProdutos").html(COLDIGO.produto.exibir(dados));
 				
