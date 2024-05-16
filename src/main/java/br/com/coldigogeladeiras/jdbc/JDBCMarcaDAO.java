@@ -1,6 +1,18 @@
 package br.com.coldigogeladeiras.jdbc;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
+
+import br.com.coldigogeladeiras.jdbcinterface.MarcaDAO;
+import br.com.coldigogeladeiras.modelo.Marca;
 import java.util.List;
 
 import java.sql.Connection;
@@ -19,7 +31,8 @@ public class JDBCMarcaDAO implements MarcaDAO {
 	}
 	
 	public List<Marca> buscar() {
-		String comando = "Select * from marcas";
+		String comando = "SELECT * FROM marcas;";
+		System.out.println(comando);
 		
 		List<Marca> listMarcas = new ArrayList<Marca>();
 		
