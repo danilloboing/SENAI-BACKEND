@@ -77,4 +77,91 @@ public class ProdutoRest extends UtilRest {
 			return this.buildErrorResponse(e.getMessage());
 		}
 	}
+
+	@DELETE
+	@Path("/excluir/{id}")
+	@Consumes("application/*")
+	public Response excluir(@PathParam("id") int id) {
+
+		try {
+
+			Conexao conec = new Conexao();
+			Connection conexao = conec.abrirConexao();
+			JDBCProdutoDAO jdbcProduto = new JDBCProdutoDAO(conexao);
+
+			boolean retorno = jdbcProduto.deletar(id);
+
+			String msg = "";
+			if (retorno) {
+				msg = "Produto excluído com sucesso!";
+			} else {
+				msg = "Erro ao excluir produto.";
+			}
+
+			conec.fecharConexao();
+			return this.buildResponse(msg);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return this.buildErrorResponse(e.getMessage());
+		}
+		// fim função de deletar;
+	}
+
+	@GET
+	@Path("/buscarPorId")
+	@Consumes("application/*")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response buscaPorId(@QueryParam("id") int id) {
+
+		System.out.println("ENTROU AQUI REST");
+
+		try {
+
+			Produto produto = new Produto();
+			Conexao conec = new Conexao();
+			Connection conexao = conec.abrirConexao();
+			JDBCProdutoDAO jdbcProduto = new JDBCProdutoDAO(conexao);
+
+			produto = jdbcProduto.buscarPorId(id);
+
+			conec.fecharConexao();
+
+			return this.buildResponse(produto);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return this.buildErrorResponse(e.getMessage());
+		}
+
+	}
+
+	@PUT
+	@Path("/alterar")
+	@Consumes("application/*")
+	public Response alterar(String produtoParam) {
+		try {
+			Produto produto = new Gson().fromJson(produtoParam, Produto.class);
+			Conexao conec = new Conexao();
+			Connection conexao = conec.abrirConexao();
+			JDBCProdutoDAO jdbcProduto = new JDBCProdutoDAO(conexao);
+
+			boolean retorno = jdbcProduto.alterar(produto);
+
+			String msg = "";
+
+			if (retorno) {
+				msg = "Produto alterado com sucesso!";
+			} else {
+				msg = "Erro ao alterar produto.";
+			}
+
+			conec.fecharConexao();
+			return this.buildResponse(msg);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return this.buildErrorResponse(e.getMessage());
+		}
+	}
 }
